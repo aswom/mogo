@@ -301,7 +301,7 @@ html,body{
       display: grid;
       grid-template-columns: repeat(3,1fr);
       grid-gap: 30px;
-
+      margin-bottom: 120px;
       & .what-item{
          display: flex;
          align-items: start;
@@ -334,6 +334,182 @@ html,body{
       }
    } 
 }
+
+.what-u{
+   background: url('/img/rectangle_21_928.svg');
+      margin:0 auto;
+       width:100%;
+       height:auto;
+
+
+   & .what-uniq{
+
+         margin-top: 100px;
+         text-align: center;
+         & h2{
+            margin-bottom:20px;
+            font-family: 'Kaushan Script';
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #333333;
+         }
+         & h3{
+            font-family: Montserrat;
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333333;
+         }
+         & .line{
+            width: 60px;
+            //height: 3px;
+            //background-color: #f38181;
+            border-bottom: 3px solid #f38181;
+         
+            margin: 50px auto;
+         } 
+         
+      & .what-items{
+         position: relative;
+         & .small{
+            position: absolute;
+            top:200px;
+            right:200px;
+            z-index:3;
+         }
+      }   
+   }
+
+}
+
+.what-s{
+   & .what-service{
+    
+   text-align: center;
+   & h2{
+      margin: 90px 0 20px;
+      font-family: 'Kaushan Script';
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #333333;
+   }
+   & h3{
+      font-family: Montserrat;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333333;
+   }
+   & .line{
+      width: 60px;
+      //height: 3px;
+      //background-color: #f38181;
+      border-bottom: 3px solid #f38181;
+     
+   margin: 50px auto;
+   }
+   & p{
+      font-family: Roboto;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #999999;
+      width:950px;
+      padding-bottom: 100px;
+      margin: 0 auto;
+
+   }
+   & .what-items{
+      display:flex;
+      
+      //justify-items: space-between;
+      & .what-item2{
+         margin-left:40px;
+        /* Acordeon styles */
+         & .tab {
+            position: relative;
+            margin-bottom: 1px;
+            //width: 100%;
+            color: #fff;
+            overflow: hidden;
+            
+          &  input {
+               position: absolute;
+               opacity: 0;
+               z-index: -1;
+               }
+           & label {
+            position: relative;
+            display: block;
+            padding: 0 0 0 1em;
+            background: #16a085;
+            font-weight: bold;
+            line-height: 3;
+            cursor: pointer;
+            }   
+            //& .blue label {
+            // background: #fff; //#2980b9;
+            //} 
+            //& .tab-content {
+            //   background:  #fff; //#3498db;
+            //   }
+            & .tab-content {
+               max-height: 0;
+               overflow: hidden;
+               background: #1abc9c;
+               //-webkit-transition: max-height .35s;
+               //-o-transition: max-height .35s;
+               transition: max-height .35s;
+               }
+            & .tab-content p {
+               margin: 1em;
+               color:#fff;
+               width:500px;
+               }  
+               
+            & input:checked ~ .tab-content {
+            max-height: 120vh;
+            }  
+             /* Icon */
+            &  label::after {
+               position: absolute;
+               right: 0;
+               top: 0;
+               display: block;
+               //width: 3em;
+               height: 3em;
+               line-height: 3;
+               text-align: center;
+               //-webkit-transition: all .35s;
+               //-o-transition: all .35s;
+               transition: all .35s;
+               } 
+               & input[type=checkbox] + label::after {
+               content: "+";
+               padding-right:20px;
+               }
+
+               & input[type=checkbox]:checked + label::after {
+               transform: rotate(315deg);
+               }
+               & input[type=radio]:checked + label::after {
+               transform: rotateX(180deg);
+               }
+
+         }
+
+      }
+
+
+   }
+}
+}
+
+
 
 
 /* Основные стили */

@@ -316,6 +316,7 @@ html, body {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  margin-bottom: 120px;
 }
 
 .what-w .what-items .what-item {
@@ -354,6 +355,172 @@ html, body {
   line-height: 24px;
   font-weight: 400;
   color: #999999;
+}
+
+.what-u {
+  background: url("/img/rectangle_21_928.svg");
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.what-u .what-uniq {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.what-u .what-uniq h2 {
+  margin-bottom: 20px;
+  font-family: 'Kaushan Script';
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+}
+
+.what-u .what-uniq h3 {
+  font-family: Montserrat;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.what-u .what-uniq .line {
+  width: 60px;
+  border-bottom: 3px solid #f38181;
+  margin: 50px auto;
+}
+
+.what-u .what-uniq .what-items {
+  position: relative;
+}
+
+.what-u .what-uniq .what-items .small {
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  z-index: 3;
+}
+
+.what-s .what-service {
+  text-align: center;
+}
+
+.what-s .what-service h2 {
+  margin: 90px 0 20px;
+  font-family: 'Kaushan Script';
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+}
+
+.what-s .what-service h3 {
+  font-family: Montserrat;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.what-s .what-service .line {
+  width: 60px;
+  border-bottom: 3px solid #f38181;
+  margin: 50px auto;
+}
+
+.what-s .what-service p {
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+  width: 950px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.what-s .what-service .what-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.what-s .what-service .what-items .what-item2 {
+  margin-left: 40px;
+  /* Acordeon styles */
+}
+
+.what-s .what-service .what-items .what-item2 .tab {
+  position: relative;
+  margin-bottom: 1px;
+  color: #fff;
+  overflow: hidden;
+  /* Icon */
+}
+
+.what-s .what-service .what-items .what-item2 .tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.what-s .what-service .what-items .what-item2 .tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #16a085;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.what-s .what-service .what-items .what-item2 .tab .tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #1abc9c;
+  -webkit-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.what-s .what-service .what-items .what-item2 .tab .tab-content p {
+  margin: 1em;
+  color: #fff;
+  width: 500px;
+}
+
+.what-s .what-service .what-items .what-item2 .tab input:checked ~ .tab-content {
+  max-height: 120vh;
+}
+
+.what-s .what-service .what-items .what-item2 .tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.what-s .what-service .what-items .what-item2 .tab input[type=checkbox] + label::after {
+  content: "+";
+  padding-right: 20px;
+}
+
+.what-s .what-service .what-items .what-item2 .tab input[type=checkbox]:checked + label::after {
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+.what-s .what-service .what-items .what-item2 .tab input[type=radio]:checked + label::after {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 /* Основные стили */
