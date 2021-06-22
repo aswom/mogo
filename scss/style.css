@@ -1,0 +1,397 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto&display=swap");
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*Стили для демонстрации*/
+html, body {
+  height: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  padding: 50px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content {
+  padding: 20px 360px;
+  background: url("/img/picture_4.svg") no-repeat;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.bd-grid {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+}
+
+.menu {
+  min-height: 1005px;
+  height: auto;
+}
+
+.menu .menu-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu .logo {
+  font-family: Montserrat;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.menu .r-menu a {
+  margin-left: 50px;
+  text-decoration: none;
+  padding-bottom: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fce38a;
+}
+
+.menu .r-menu .cart {
+  width: 18px;
+  height: 15px;
+}
+
+.menu .r-menu .active {
+  border-bottom: 2px solid #fff;
+}
+
+.menu-middle {
+  margin-top: 150px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.menu-middle h2 {
+  font-family: 'Kaushan Script';
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffffff;
+  padding-bottom: 35px;
+}
+
+.menu-middle h3 {
+  font-family: Montserrat;
+  font-size: 150px;
+  line-height: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.menu-middle .line {
+  margin: 60px 0 40px;
+  width: 60px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+.menu-middle .btn {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: 3px solid #fff;
+}
+
+.menu .banner {
+  margin-top: 145px;
+}
+
+.menu .banner .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .banner .slide {
+  margin-right: 30px;
+}
+
+.menu .banner .line {
+  width: 280px;
+  height: 3px;
+  background-color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.menu .banner .num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.menu .banner h2 {
+  font-family: Montserrat;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.menu .banner h3 {
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.menu .banner h3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.what .what-items {
+  text-align: center;
+}
+
+.what .what-items h2 {
+  margin: 90px 0 20px;
+  font-family: 'Kaushan Script';
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+}
+
+.what .what-items h3 {
+  font-family: Montserrat;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.what .what-items .line {
+  width: 60px;
+  border-bottom: 3px solid #f38181;
+  margin: 50px auto;
+}
+
+.what .what-items p {
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+  width: 950px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.what .what-items .what-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+}
+
+.what .what-items .what-img img {
+  width: 380px;
+  height: 250px;
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.89)), to(rgba(243, 129, 129, 0.89)));
+  background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.89) 0%, rgba(243, 129, 129, 0.89) 100%);
+  margin-right: 30px;
+}
+
+.facts {
+  background-color: #95e1d3;
+}
+
+.facts .facts-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.facts .facts-items .facts-item {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.facts .facts-items .facts-item h2 {
+  font-family: Montserrat;
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.facts .facts-items .facts-item p {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.what-w .what-work {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.what-w .what-work h2 {
+  margin-bottom: 20px;
+  font-family: 'Kaushan Script';
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+}
+
+.what-w .what-work h3 {
+  font-family: Montserrat;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.what-w .what-work .line {
+  width: 60px;
+  border-bottom: 3px solid #f38181;
+  margin: 50px auto;
+}
+
+.what-w .what-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.what-w .what-items .what-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.what-w .what-items .what-item img {
+  margin-right: 20px;
+}
+
+.what-w .what-items .what-item .text {
+  width: 270px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: start;
+}
+
+.what-w .what-items .what-item .text h2 {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.what-w .what-items .what-item .text p {
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+/* Основные стили */
+.title {
+  font-size: 30px;
+  font-weight: 700px;
+  color: #fff;
+  margin: 0 0 30px 0;
+}
+
+.image-slider {
+  padding: 30px 0 70px 0;
+}
+
+.image-slider_image {
+  text-align: center;
+}
+
+.image-slider_image img {
+  max-width: 100%;
+}
+
+.image-slider .swiper-button-next::after,
+.image-slider .swiper-button-prev::after {
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.image-slider .swiper-pagination {
+  bottom: 0;
+}
+
+.image-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
