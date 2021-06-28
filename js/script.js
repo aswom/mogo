@@ -1,24 +1,36 @@
-new Swiper('.image-slider',
-   {
-      //arrow
-      navigation:
-      {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev'
-      },
-      // navigation
-      pagination: {
-         el: '.swiper-pagination',
-         //bulleti
-         clickable: true,
-         //dinamik bullet
-         dynamicBullets: true,
-         //castom bullet
-         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-         },
-      },
+$(document).ready(function () {
+   $('.title').click(function (event) {
+      if ($('.what-item2').hasClass('one')) {
+         $('.title').not($(this)).removeClass('active');
+         $('.p').not($(this).next()).slideUp(300);
+      }
+      $(this).toggleClass('active').next().slideToggle(300);
+   });
 });
+
+
+
+//new Swiper('.image-slider',
+//   {
+//      //arrow
+//      navigation:
+//      {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev'
+//      },
+//      // navigation
+//      pagination: {
+//         el: '.swiper-pagination',
+//         //bulleti
+//         clickable: true,
+//         //dinamik bullet
+//         dynamicBullets: true,
+//         //castom bullet
+//         renderBullet: function (index, className) {
+//            return '<span class="' + className + '">' + (index + 1) + '</span>';
+//         },
+//      },
+//});
 
 
 

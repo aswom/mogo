@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 91" width="5" height="91">
+	<title>service 2</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #95e1d3 } 
+	</style>
+	<g id="service 2">
+		<g id="text">
+			<path id="Rectangle 11 copy" class="shp0" d="M2.5 1C3.88 1 5 2.12 5 3.5L5 88.5C5 89.88 3.88 91 2.5 91C1.12 91 0 89.88 0 88.5L0 3.5C0 2.12 1.12 1 2.5 1Z" />
+		</g>
+	</g>
+</svg>

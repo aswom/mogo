@@ -1,0 +1,20 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 389" width="480" height="389">
+	<title>work</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="240" y1="390" x2="240" y2="0">
+			<stop offset="0" stop-color="#f0e290"  />
+			<stop offset="1" stop-color="#e98a89"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+	</style>
+	<g id="work">
+		<g id="pic">
+			<g id="hover">
+				<path id="Rectangle 17 copy 2" class="shp0" d="M0 0L480 0L480 390L0 390L0 0Z" />
+			</g>
+		</g>
+	</g>
+</svg>
