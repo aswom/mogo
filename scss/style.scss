@@ -299,8 +299,8 @@ html,body{
 
    & .what-items{
       display: grid;
-      //grid-template-columns: repeat(3,1fr);
-      grid-auto-flow: column;
+     grid-template-columns: 1fr 1fr 1fr;
+     // grid-auto-flow: column;
       grid-gap: 30px;
       margin-bottom: 120px;
       & .what-item{
@@ -584,8 +584,11 @@ html,body{
 }
 
 .ourteam{
+  
    & .our-team{
 margin-bottom:120px;
+
+ text-align: center;
   
    & h2{
       margin: 90px 0 20px;
@@ -669,6 +672,7 @@ margin-bottom:120px;
 }
 
 .work{
+    margin-top:100px;
    &-our{
        text-align: center;
  & h2{
@@ -713,13 +717,10 @@ margin-bottom:120px;
      grid-template-columns: 1fr 1fr 1fr 1fr;
     // grid-template-rows: auto auto;
    // grid-auto-flow: column;
-    grid-gap: 10px;
-    
-  
+    //grid-gap: 10px;
+   
+     
       & .work-item{
-         
-        
-        
          
          
          & img{
@@ -759,16 +760,7 @@ margin-bottom:120px;
                object-position: 0 0;
             }
          } 
-           & .item6{
-            //  background-image: linear-gradient(0.0deg, rgba(252,227,138,0.89) 0%, rgba(243,129,129,0.89) 100%); 
-            & img{
-
-               //object-position: 0 0;
-z-index:5;
-//background-color: #95e1d3;
-      background-image: linear-gradient(0.0deg, rgba(252,227,138,0.89) 0%, rgba(243,129,129,0.89) 100%);
-            }
-         } 
+       
    }
 
    }

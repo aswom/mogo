@@ -312,7 +312,8 @@ html, body {
 .what-w .what-items {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   margin-bottom: 120px;
 }
@@ -605,6 +606,7 @@ html, body {
 
 .ourteam .our-team {
   margin-bottom: 120px;
+  text-align: center;
 }
 
 .ourteam .our-team h2 {
@@ -684,6 +686,10 @@ html, body {
   padding: 50px 0;
 }
 
+.work {
+  margin-top: 100px;
+}
+
 .work-our {
   text-align: center;
 }
@@ -729,7 +735,6 @@ html, body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
 }
 
 .work-our .work-items .work-item img {
@@ -772,12 +777,6 @@ html, body {
 .work-our .work-items .item7 img {
   -o-object-position: 0 0;
      object-position: 0 0;
-}
-
-.work-our .work-items .item6 img {
-  z-index: 5;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.89)), to(rgba(243, 129, 129, 0.89)));
-  background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.89) 0%, rgba(243, 129, 129, 0.89) 100%);
 }
 
 /* Основные стили */
