@@ -10,36 +10,31 @@ $(document).ready(function () {
 
 
 
-//new Swiper('.image-slider',
-//   {
-//      //arrow
-//      navigation:
-//      {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev'
-//      },
-//      // navigation
-//      pagination: {
-//         el: '.swiper-pagination',
-//         //bulleti
-//         clickable: true,
-//         //dinamik bullet
-//         dynamicBullets: true,
-//         //castom bullet
-//         renderBullet: function (index, className) {
-//            return '<span class="' + className + '">' + (index + 1) + '</span>';
-//         },
-//      },
-//});
+new Swiper('.test-items',
+   {
+      //arrow
+      navigation:
+      {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev'
+      },
+      // navigation
+      pagination: {
+         el: '.swiper-pagination',
+         //bulleti
+         clickable: true,
+         //dinamik bullet
+         dynamicBullets: true,
+         //castom bullet
+         renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+         },
+      },
+});
 
 
 
-//   $(document).ready(function(){
-//      $('.flexslider').flexslider({
-//    // namespace:"flex-",
-//    animation: "slide"
-//  });
-//});
+
 
 //$(document).ready(function(){
 //	$('.slider').slick({
