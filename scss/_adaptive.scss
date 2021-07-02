@@ -1,0 +1,58 @@
+@mixin tablet {
+   @media screen and (max-width:768px) {
+      @content;
+   }
+}
+
+@mixin mobile {
+   @media screen and (max-width:280px) {
+      @content;
+   }
+}
+
+
+@media only screen and (max-width: 1200px){
+.menu .menu-top{
+   padding:  0 calc(20px+(50-20)*((110vw-992px)/(1200-320)));
+   padding: 0 50px;
+}
+
+.work-our .work-items .work-item img {
+         
+        
+         width: 240px;
+         height: 190px;
+            
+}
+}
+@media only screen and (max-width: 992px){
+   .menu .menu-top{
+      padding:  0 calc(20px+(50-20)*((110vw-768px)/(1200-768)));
+   }
+}
+@media only screen and (max-width: 768px){
+.menu-middle h2 {
+  font-family: 'Kaushan Script';
+  font-size: 52px;
+}
+.menu-middle h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+}
+}
+@media only screen and (max-width: 480px){
+ .menu .menu-top{
+      padding:  0 calc(20px+(50-20)*((110vw-480px)/(1200-480)));
+   }
+  .work-item{
+         
+         
+         & img{
+         width: 240px;
+         height: 190px;
+         }     
+}
+}
+@media only screen and (max-width: 320px){
+
+}

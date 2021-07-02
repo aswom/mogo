@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto&display=swap");
+@import url("adaptive");
 *, *:before, *:after {
   padding: 0;
   margin: 0;
@@ -21,13 +22,12 @@ html, body {
 
 .wrapper {
   overflow: hidden;
-  min-height: 100%;
+  max-width: 100%;
+  min-height: auto;
   padding: 50px;
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 0 auto;
 }
 
 .content {
@@ -39,7 +39,7 @@ html, body {
 }
 
 .bd-grid {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -55,15 +55,17 @@ html, body {
 }
 
 .menu .menu-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 20px;
 }
 
 .menu .logo {
@@ -72,6 +74,12 @@ html, body {
   line-height: 1.2;
   font-weight: 700;
   color: #ffffff;
+}
+
+.menu .r-menu {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
 }
 
 .menu .r-menu a {
@@ -729,52 +737,50 @@ html, body {
   margin: 0 auto;
 }
 
-.work-our .work-items {
+.work .work-items {
   background-color: #999;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: (minmax(320px, 480px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 480px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.work-our .work-items .work-item img {
+.work .work-items .work-item img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center bottom;
      object-position: center bottom;
   width: 480px;
   height: 390px;
+  min-width: 100%;
+  min-height: auto;
   background-color: #95e1d3;
 }
 
-.work-our .work-items .item3 {
+.work .work-items .item3 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/ span 2;
   -ms-grid-column: 3;
   grid-column: 3;
-  width: 100%;
-  /* Ширина области */
-  height: 100%;
-  /* Высота области */
   margin: 0;
   /* Обнуляем отступы */
 }
 
-.work-our .work-items .item3 img {
-  height: 100%;
+.work .work-items .item3 img {
+  min-height: 100%;
   /* Высота изображении */
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* Вписываем фотографию в область */
 }
 
-.work-our .work-items .item4 img {
+.work .work-items .item4 img {
   -o-object-position: center 0;
      object-position: center 0;
 }
 
-.work-our .work-items .item7 img {
+.work .work-items .item7 img {
   -o-object-position: 0 0;
      object-position: 0 0;
 }
@@ -1274,5 +1280,84 @@ html, body {
   line-height: 1.2;
   font-weight: 400;
   color: #f38181;
+}
+
+@media only screen and (max-width: 1950px) {
+  .work {
+    max-width: 1900px;
+    grid-gap: 10px;
+  }
+  .work .work-items .item3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/ span 3;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .work .work-items .item3 img {
+    max-width: 100%;
+    /* Ширина изображений */
+    min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .work {
+    max-width: 1500px;
+    grid-gap: 10px;
+  }
+  .work .work-items .item3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/ span 3;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .work .work-items .item3 img {
+    max-width: 100%;
+    /* Ширина изображений */
+    min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .work {
+    max-width: 1200px;
+    grid-gap: 10px;
+  }
+  .menu .menu-top {
+    padding: 0 calc(20px+(50-20)*((110vw-992px)/(1200-320)));
+  }
+  .work .work-items .item3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/ span 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .work .work-items .item3 img {
+    max-width: 100%;
+    /* Ширина изображений */
+    min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 922px) {
+  .work {
+    max-width: 922px;
+    grid-gap: 10px;
+  }
+  .work .work-items .item3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/ span 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .work .work-items .item3 img {
+    max-width: 100%;
+    /* Ширина изображений */
+    min-height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
