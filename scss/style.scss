@@ -30,7 +30,7 @@ html,body{
     margin:0 auto;
 }
 .content{
-   padding: 20px 360px;
+  //padding: 20px 360px;
    background: url("/img/picture_4.svg") no-repeat;
        margin:0 auto;
        width:100%;
@@ -39,6 +39,7 @@ html,body{
 
 .bd-grid{
     max-width: 1200px;
+    min-width:100%;
    margin:0 auto;
 
 }
@@ -58,6 +59,25 @@ html,body{
       padding: 0 20px;
      
    }
+   & .burger{
+         margin:0;
+         padding:0;
+         max-width: 30px;
+         width:100%;
+         min-height: 35px;
+         height:auto;
+         cursor:pointer;
+         background: url(/img/burger/hamburger-menu.svg) no-repeat center;
+         background-size: contain;
+         display:none;
+   }
+     & .burger_active{
+        margin: 0;
+        padding:0;
+        
+         background: url(/img/burger/19144076451579237600.svg) no-repeat center;
+         background-size: contain;
+       }
    & .logo{
          font-family: Montserrat;
          font-size: 30px;
@@ -69,6 +89,7 @@ html,body{
    & .r-menu{
       display: grid;
       grid-auto-flow: column; 
+      // grid-template-columns: repeat(7, 1fr);
       
       & a{
          margin-left:50px;
@@ -1252,6 +1273,14 @@ color: #333333;
 
 // media
 @media only screen and (max-width: 1950px){
+   .wrapper{
+      & .content{
+     max-width:1900px;
+      grid-gap: 10px;
+      margin: 0 auto;
+     // justify-content: center;
+      }
+   }
 .work{
       max-width:1900px;
       grid-gap: 10px;
@@ -1271,6 +1300,14 @@ color: #333333;
 }
 
 @media only screen and (max-width: 1500px){
+    .wrapper{
+      & .content{
+     max-width:1500px;
+      grid-gap: 10px;
+      margin: 0 auto;
+      //justify-content: center;
+      }
+   }
 .work{
       max-width:1500px;
       grid-gap: 10px;
@@ -1290,13 +1327,66 @@ color: #333333;
 }
 
 @media only screen and (max-width: 1200px){
+    .wrapper{
+      & .content{
+     max-width:1200px;
+      grid-gap: 10px;
+      margin: 0 auto;
+      //justify-content: center;
+      }
+   }
+   .bd-grid{
+      max-width:0px;
+   //   width:100%;
+   //  // margin:0 auto;
+   //   min-height: auto;
+   }
    .work{
       max-width:1200px;
       grid-gap: 10px;
    }
-.menu .menu-top{
-   padding:  0 calc(20px+(50-20)*((110vw-992px)/(1200-320)));
+.menu {
+ & .menu-top{
+  // padding:  0 calc(20px+(50-20)*((110vw-992px)/(1200-320)));
+display: grid;
+//grid-template-columns: 1fr;
+//display: flex;
+grid-auto-flow: column;
+    align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+
+
+    & .r-menu{
+      // display: none;
+      //grid-template-columns: 1fr;
+     display: grid;
+//grid-template-columns: 1fr;
+//display: flex;
+grid-auto-flow: column;
+      margin-left:50px;
+      & a{
+          //margin-right:10px;
+          
+      }
+    }
+    & .burger{
+      // display: block;
+    }
+   
    //padding: 0 50px;
+     
+   //   padding: 20px 0;
+     
+      
+   }
+   & .logo{
+      & h2{
+      margin:0;
+      padding:0;
+      }
+     // padding-bottom: 40px;
+   }
 }
 
 .work .work-items .item3 {
@@ -1312,8 +1402,55 @@ color: #333333;
 }
 
 }
-@media only screen and (max-width: 922px){
-    .work{
+@media only screen and (max-width: 992px){
+     .wrapper{
+      & .content{
+     max-width:992px;
+      grid-gap: 10px;
+      margin: 0 auto;
+      //justify-content: center;
+      }
+   }
+ .menu {
+ & .menu-top{
+
+display: grid;
+grid-template-rows: 1fr 1fr;
+
+    align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+
+
+    & .r-menu{
+   
+     display: grid;
+grid-auto-flow: column;
+      & a{
+          //margin-right:10px;
+          
+      }
+    }
+    & .burger{
+       display: none;
+      // display: block;
+    }
+   
+        
+   }
+   & .logo{
+       margin:0 auto;
+      & h2{
+      margin:0;
+      padding:0;
+
+      }
+      padding-bottom: 40px;
+   }
+}
+ 
+ 
+   .work{
       max-width:922px;
       grid-gap: 10px;
    }
@@ -1329,6 +1466,10 @@ color: #333333;
  //object-fit: cover; /* Вписываем фотографию в область */
     }       
 }
+}
+@media only screen and (max-width: 768px){
+ 
+ 
 }
 @media only screen and (max-width: 480px){
  

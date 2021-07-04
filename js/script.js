@@ -1,3 +1,10 @@
+(function () {
+   const burger = document.querySelector('.burger');
+   burger.addEventListener('click', () => {
+      burger.classList.toggle('burger_active');
+   });
+}());
+
 $(document).ready(function () {
    $('.title').click(function (event) {
       if ($('.what-item2').hasClass('one')) {
