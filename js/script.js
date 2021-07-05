@@ -1,9 +1,16 @@
-(function () {
-   const burger = document.querySelector('.burger');
-   burger.addEventListener('click', () => {
-      burger.classList.toggle('burger_active');
+//(function () {
+//   const burger = document.querySelector('.burger');
+//   burger.addEventListener('click', () => {
+//      burger.classList.toggle('burger_active');
+//   });
+//}());
+$(document).ready(function () {
+   $('.burger').click(function (event) {
+      $('.burger,.r-menu').toggleClass('active');
    });
-}());
+
+});
+
 
 $(document).ready(function () {
    $('.title').click(function (event) {

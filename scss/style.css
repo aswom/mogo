@@ -68,27 +68,7 @@ html, body {
   padding: 0 20px;
 }
 
-.menu .burger {
-  margin: 0;
-  padding: 0;
-  max-width: 30px;
-  width: 100%;
-  min-height: 35px;
-  height: auto;
-  cursor: pointer;
-  background: url(/img/burger/hamburger-menu.svg) no-repeat center;
-  background-size: contain;
-  display: none;
-}
-
-.menu .burger_active {
-  margin: 0;
-  padding: 0;
-  background: url(/img/burger/19144076451579237600.svg) no-repeat center;
-  background-size: contain;
-}
-
-.menu .logo {
+.menu .menu-top .logo {
   font-family: Montserrat;
   font-size: 30px;
   line-height: 1.2;
@@ -96,13 +76,31 @@ html, body {
   color: #ffffff;
 }
 
-.menu .r-menu {
+@media only screen and (max-width: 768px) {
+  .menu .menu-top .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .menu .menu-top .burger::before,
+  .menu .menu-top .burger::arter {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+}
+
+.menu .menu-top .r-menu {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
 }
 
-.menu .r-menu a {
+.menu .menu-top .r-menu a {
   margin-left: 50px;
   text-decoration: none;
   padding-bottom: 10px;
@@ -114,12 +112,12 @@ html, body {
   color: #fce38a;
 }
 
-.menu .r-menu .cart {
+.menu .menu-top .r-menu .cart {
   width: 18px;
   height: 15px;
 }
 
-.menu .r-menu .active {
+.menu .menu-top .r-menu .active {
   border-bottom: 2px solid #fff;
 }
 
@@ -1425,6 +1423,7 @@ html, body {
   }
   .menu .menu-top .burger {
     display: none;
+    display: block;
   }
   .menu .logo {
     margin: 0 auto;
@@ -1449,6 +1448,33 @@ html, body {
     max-width: 100%;
     /* Ширина изображений */
     min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: hidden;
+    padding: 0;
+  }
+  .wrapper .content {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper .content .menu-middle {
+    margin: 150px auto;
+  }
+  .wrapper .content .menu-middle h2 {
+    font-size: 36px;
+  }
+  .wrapper .content .menu-middle h3 {
+    font-size: 75px;
+    line-height: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
